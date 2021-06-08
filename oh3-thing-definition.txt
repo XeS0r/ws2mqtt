@@ -1,0 +1,163 @@
+UID: mqtt:topic:mqtt_broker:outdoor_weather_station
+label: outdoor_weather_station
+thingTypeUID: mqtt:topic
+configuration:
+  payloadNotAvailable: Offline
+  availabilityTopic: outdoor/weatherstation/LWT
+  payloadAvailable: Online
+bridgeUID: mqtt:broker:mqtt_broker
+channels:
+  - id: id
+    channelTypeUID: mqtt:string
+    label: Station ID
+    description: ""
+    configuration:
+      stateTopic: outdoor/weatherstation/ID
+  - id: outdoor_temperature
+    channelTypeUID: mqtt:number
+    label: Outdoor Temperature
+    description: ""
+    configuration:
+      formatBeforePublish: "%.2f"
+      stateTopic: outdoor/weatherstation/temp
+      unit: °C
+  - id: indoor_humidity
+    channelTypeUID: mqtt:number
+    label: Indoor Humidity
+    description: ""
+    configuration:
+      stateTopic: outdoor/weatherstation/indoorhumidity
+      unit: "%"
+  - id: outdoor_humidity
+    channelTypeUID: mqtt:number
+    label: Outdoor Humidity
+    description: ""
+    configuration:
+      stateTopic: outdoor/weatherstation/humidity
+      unit: "%"
+  - id: dateutc
+    channelTypeUID: mqtt:datetime
+    label: Last Update
+    description: ""
+    configuration:
+      stateTopic: outdoor/weatherstation/dateutc
+  - id: indoor_temperature
+    channelTypeUID: mqtt:number
+    label: Indoor Temperature
+    description: null
+    configuration:
+      formatBeforePublish: "%.2f"
+      stateTopic: outdoor/weatherstation/indoortemp
+      unit: °C
+  - id: dewpt
+    channelTypeUID: mqtt:number
+    label: Dewpoint
+    description: null
+    configuration:
+      formatBeforePublish: "%.2f"
+      stateTopic: outdoor/weatherstation/dewpt
+      unit: °C
+  - id: windchill
+    channelTypeUID: mqtt:number
+    label: Windchill
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/windchill
+      unit: °C
+  - id: windspeedkmh
+    channelTypeUID: mqtt:number
+    label: Windspeed
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/windspeedkmh
+      unit: km/h
+  - id: windgustkmh
+    channelTypeUID: mqtt:number
+    label: Windgust
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/windgustkmh
+      unit: km/h
+  - id: winddir
+    channelTypeUID: mqtt:number
+    label: Wind direction
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/winddir
+  - id: absbaromhpa
+    channelTypeUID: mqtt:number
+    label: Abs. Barometer
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/absbaromhpa
+      unit: hPA
+  - id: rainmm
+    channelTypeUID: mqtt:number
+    label: Rain mm
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/rainmm
+      unit: mm
+  - id: dailyrainmm
+    channelTypeUID: mqtt:number
+    label: Daily rain mm
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/dailyrainmm
+      unit: mm
+  - id: weeklyrainmm
+    channelTypeUID: mqtt:number
+    label: Weekly rain mm
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/weeklyrainmm
+      unit: mm
+  - id: mothlyrainmm
+    channelTypeUID: mqtt:number
+    label: Monthly rain mm
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/monthlyrainmm
+      unit: mm
+  - id: yearlyrainmm
+    channelTypeUID: mqtt:number
+    label: Yearly rain mm
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/yearlyrainmm
+      unit: mm
+  - id: solarradiation
+    channelTypeUID: mqtt:number
+    label: Solarradiation
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/solarradiation
+      unit: W/m²
+  - id: uv
+    channelTypeUID: mqtt:number
+    label: UV index
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/UV
+      unit: UV
+  - id: update_realtime
+    channelTypeUID: mqtt:number
+    label: Update realtime
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/realtime
+  - id: update_rtfreq
+    channelTypeUID: mqtt:number
+    label: Update frequency
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/rtfreq
+      unit: s
+  - id: barohpa
+    channelTypeUID: mqtt:number
+    label: Barometer
+    description: null
+    configuration:
+      stateTopic: outdoor/weatherstation/barohpa
+      unit: 
+      unit: hPA

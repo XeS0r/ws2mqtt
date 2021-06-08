@@ -1,0 +1,10 @@
+[Unit]
+Description=Weather station service to translate requests for the mqtt broker
+
+[Service]
+Type=simple
+User=www-data
+ExecStart=/usr/bin/python3 /opt/ws2mqtt/server.py
+
+[Install]
+WantedBy=multi-user.target
